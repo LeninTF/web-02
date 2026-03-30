@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro al Taller</title>
+        <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        margin: 0;
+        padding: 0;
+    }
+    .contenedor {
+        width: 70%;
+        max-width: 800px;
+        margin: 40px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+        text-align: center;
+    }
+    
+    label {
+        font-weight: bold;
+    }
+    input, select, textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-sizing: border-box;
+    }
+
+    .radio-group {
+        margin-bottom: 16px;
+    }
+
+    .radio-group label {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-weight: normal;
+        margin-bottom: 5px;
+    }
+
+    .radio-group input[type="radio"] {
+        width: auto;
+        margin: 0;
+    }
+
+    button {
+        padding: 10px 18px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .btn-enviar {
+        background: #0d6efd;
+        color: white;
+    }
+    .btn-limpiar {
+        background: #6c757d;
+        color: white;
+    }
+</style>
+    </head>
+    <body>
+        <div class="contenedor">
+            <h1>Registro al Taller de Programación Web</h1>
+            <p>Completa el siguiente formulario para registrarte.</p>
+            <form action="registro" method="post">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required>
+                <label for="tema">Tema de interés</label>
+                <select id="tema" name="tema" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Servlets">Servlets</option>
+                    <option value="JSP">JSP</option>
+                    <option value="Bases de Datos">Bases de Datos</option>
+                    <option value="Sesiones">Sesiones</option>
+                </select>
+                <label>Turno</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="turno" value="Matutino" required>
+                        Matutino</label>
+                    <label><input type="radio" name="turno" value="Vespertino"> Vespertino</label>
+                </div>
+                <label for="comentarios">Comentarios</label>
+                <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+                <button type="submit" class="btn-enviar">Enviar registro</button>
+                <button type="reset" class="btn-limpiar">Limpiar</button>
+            </form>
+        </div>
+    </body>
+</html>
