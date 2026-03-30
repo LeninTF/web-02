@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Saludo Personalizado</title>
+        <style>
+            .container{
+                width: 350px;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid black;
+                border-radius: 10px;
+                text-align: center;
+                margin-top: 50px;
+            }
+            input{
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <h2>Saludo Personalizado</h2>
+
+            <form action="SaludoServlet" method="post">
+
+                Nombre: <br>
+                <input type="text" name="nombre" required><br>
+
+                Carrera: <br>
+                <input type="text" name="carrera" required><br><br>
+
+                <input type="submit" value="Enviar">
+
+            </form>
+        </div>
+
+    </body>
+</html>
